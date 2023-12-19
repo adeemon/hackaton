@@ -1,0 +1,38 @@
+.main-board {
+    &__tasks-board {
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__tasks-column {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 5px;
+        height: fit-content;
+        gap: 15px;
+        min-width: 16vw;
+        max-width: 16vw;
+        border-radius: 16px;
+        background-color: $white;
+    }
+    &__column-title {
+        @include flexCenter;
+    }
+}
+
+#new-tasks {
+    background-color: lightblue;
+}
+
+#in-work-tasks {
+    background-color: $light-orange;
+}
+
+#done-tasks {
+    background-color: $light-green;
+}
+
+#canceled-tasks {
+    background-color: $purple;
+}

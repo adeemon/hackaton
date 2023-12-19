@@ -1,0 +1,95 @@
+/**
+ * Helper mixins
+*/
+
+// Clearfix
+// http://www.cssmojo.com/latest_new_clearfix_so_far/
+// Other clearfix options: https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_clearfix-me.scss
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+// Media queries
+@mixin bp($point) {
+    @if $point==large {
+        @media (min-width: 1280px) {
+            @content;
+        }
+    }
+    @else if $point==small {
+        @media (max-width: 1279px) {
+            @content;
+        }
+    }
+}
+
+// Text selection
+@mixin text-selection($color-selection, $color-selection-bg) {
+     ::-moz-selection {
+        // sass-lint:disable-line no-vendor-prefixes
+        background: $color-selection-bg;
+        color: $color-selection;
+        text-shadow: none;
+    }
+     ::selection {
+        background: $color-selection-bg;
+        color: $color-selection;
+        text-shadow: none;
+    }
+}
+
+//Placeholders
+//Usage:
+//@include placeholder;
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin blocksPadding {
+    padding: 15px 5vw;
+}
+
+@mixin cardBorderAndBack {
+    background-color: rgba(216, 236, 237);
+    border: 1px solid rgba(66, 215, 245, 1);
+}
+
+@mixin defaultButton {
+    background-color: $button-active-color;
+    @include flexCenter;
+    border: transparent;
+    padding: 8px;
+    font-family: 'Ubuntu';
+    letter-spacing: 1px;
+    color: $white;
+    font-weight: 700;
+    cursor: pointer;
+    &:focus {
+        background-color: $link-hover-color;
+    }
+}
+
+//Placeholders
+//Usage:
+//@include placeholder;
+@mixin placeholder {
+    // sass-lint:disable no-vendor-prefixes
+     ::-webkit-input-placeholder {
+        @content
+    }
+     :-moz-placeholder {
+        @content
+    }
+     ::-moz-placeholder {
+        @content
+    }
+     :-ms-input-placeholder {
+        @content
+    }
+}

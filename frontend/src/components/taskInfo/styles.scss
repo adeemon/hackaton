@@ -1,0 +1,12 @@
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    @include cardBorderAndBack;
+    border-radius: 16px;
+    font-size: 20px;
+    &__title {
+        font-size: 16px;
+    }
+}

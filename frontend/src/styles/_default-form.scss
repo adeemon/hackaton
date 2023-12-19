@@ -1,0 +1,25 @@
+.default-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+    height: auto;
+    width: 40vw;
+    border: 5px solid $light-blue;
+    border-radius: 16px;
+    background-color: white;
+    &__select {
+        width: 100%;
+    }
+    &__error-message {
+        color: red;
+    }
+    &__input-wrapper div {
+        width: 100%;
+    }
+}
+
+ul[role=listbox] {
+    max-height: 200px;
+    overflow: auto;
+}

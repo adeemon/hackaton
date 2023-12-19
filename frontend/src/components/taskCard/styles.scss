@@ -1,0 +1,49 @@
+#task-button-new {
+    color: $light-blue;
+}
+
+#task-button-wip {
+    color: $light-orange;
+}
+
+#task-button-canceled {
+    color: $purple;
+}
+
+#task-button-done {
+    color: $light-green;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 16px;
+    @include cardBorderAndBack;
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        & button {
+            padding: 1px 1px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        width: 80%;
+        text-align: left;
+        word-break: normal;
+        overflow: hidden;
+    }
+    &__label {
+        width: 100%;
+        text-align: left;
+    }
+    &__executor {
+        padding: 6px 8px;
+    }
+}

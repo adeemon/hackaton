@@ -1,0 +1,20 @@
+.user-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    @include cardBorderAndBack;
+    border-radius: 8px;
+    font-size: 20px;
+    &__info-field {
+        @include flexCenter;
+        width: 20%;
+    }
+    &__info-field:nth-child(1) {
+        width: 10%;
+    }
+    &__info-field:last-child {
+        width: 40%;
+    }
+}

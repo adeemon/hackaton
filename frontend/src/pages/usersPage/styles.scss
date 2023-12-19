@@ -1,0 +1,15 @@
+.users {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        overflow: auto;
+        height: 70vh;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+}

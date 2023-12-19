@@ -1,0 +1,29 @@
+/* By Athlon Front-End Team */
+
+
+/* Core variables */
+
+@import "../assets/styles/vars";
+
+/* CSS Reset */
+
+@import "../assets/styles/reset";
+
+/* Mixins, helpers and functions */
+
+@import "../assets/styles/mixins";
+@import "./_body.scss";
+@import "../layout/header/styles.scss";
+@import "./modal.scss";
+@import "../components/createUserForm/styles.scss";
+@import "./default-form.scss";
+@import "../pages/usersPage/styles.scss";
+@import "../components/userCard/styles.scss";
+@import "../components/projectCard/styles.scss";
+@import "../pages/projectsPage/styles.scss";
+@import "../components/createProjectForm/styles.scss";
+@import "../pages/tasksPage/styles.scss";
+@import "../components/infoBoard/styles.scss";
+@import "../components/taskCard/styles.scss";
+@import "../components/mainBoard/styles.scss";
+@import "../components/taskInfo/styles.scss";
